@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 import { Loader } from 'components/Loader/Loader';
 import styled from 'styled-components';
 import css from './SharedLayout.module.css';
+import { ToastContainer } from 'react-toastify';
 
 const StyledLink = styled(NavLink)`
   color: black;
@@ -28,6 +29,7 @@ export const SharedLayout = () => {
           <Outlet />
         </Suspense>
       </main>
+      <ToastContainer />
     </div>
   );
 };
