@@ -41,6 +41,7 @@ const MovieDetails = () => {
     overview,
     genres,
   } = movieDetails;
+
   return (
     <>
       <Link to={goBackLink}>
@@ -75,12 +76,20 @@ const MovieDetails = () => {
       <p className={css.aboutTitle}>Additional information</p>
       <ul className={css.linkList}>
         <li className={css.linkItem}>
-          <Link to="cast" className={css.linkTitle}>
+          <Link
+            to="cast"
+            state={{ from: goBackLink }}
+            className={css.linkTitle}
+          >
             Cast
           </Link>
         </li>
         <li className={css.linkItem}>
-          <Link to="reviews" className={css.linkTitle}>
+          <Link
+            to="reviews"
+            state={{ from: goBackLink }}
+            className={css.linkTitle}
+          >
             Reviews
           </Link>
         </li>
